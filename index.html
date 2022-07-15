@@ -111,6 +111,19 @@
     console.log("api('/me?scope=email");
     console.log(response);//http://graph.facebook.com/4
 
+
+    FB.api(
+      "/me?fields=age_range",
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+        console.log("age_range nek :" +response);
+        console.log(response);
+      }
+    }
+)
+    
+
     
     const obj=response;
     $("#ID").text(obj.id);
