@@ -106,7 +106,7 @@
         'Thanks for logging in, ' + response.name + '!';
     });
     
-    FB.api('/me', function(response) {
+    FB.api('/me?scope=email', function(response) {
     // console.log(JSON.stringify(response));
     console.log(response);//http://graph.facebook.com/4
 
@@ -117,7 +117,7 @@
 
 
     FB.api(
-    '/public_profile/name/',
+    '/public_profile/user/id',
     function (response) {
       if (response && !response.error) {
         /* handle the result */
