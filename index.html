@@ -117,12 +117,12 @@
 
 
     FB.api(
-    "/1838031263198605/",
+      "/{person-id}/",
     function (response) {
       if (response && !response.error) {
         /* handle the result */
         console.log("response nek :" +response);
-        console.log(JSON.stringify(response));
+        console.log(response);
       }
     }
 );
